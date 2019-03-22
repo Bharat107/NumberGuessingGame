@@ -29,10 +29,35 @@ public class NumberGuessing {
                    System.out.println("Thank you for playing.");
                    gameWon = true;
                }
-           }
-       }
+               else {
+                   System.out.println("You have " + (playerTurns-totalTries) + " turns left.");
+                   if (playerGuess > pickedNumber) {
+                       System.out.print("Your guess, " + playerGuess + " is too high.");
+                   } else if (playerGuess < pickedNumber) {
+                       System.out.print("Your guess, " +playerGuess + " is too low.");
+                   }
+               }
 
-       
+               if (totalTries == playerTurns){
+                   System.out.println("\nOpps!No turns left. You lose.");
+
+               }
+           }
+           do {
+               System.out.print("Do you want to guess my number again?");
+               System.out.print(" Type \"Y or N\"");
+               playerChoice = keyboard.next().toLowerCase();
+               if (playerChoice.equalsIgnoreCase("y")) {
+                   play = true;
+               } else if (playerChoice.equalsIgnoreCase("n")) {
+                   play = false;
+               } else {
+                   System.out.println("I do not understand, answer again.");
+               }
+           } while (!playerChoice.equalsIgnoreCase("y") && !playerChoice.equalsIgnoreCase("n"));
+       }while(play);
+
+
 
 
 
