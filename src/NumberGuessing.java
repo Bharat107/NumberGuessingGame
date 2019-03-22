@@ -13,7 +13,6 @@ public class NumberGuessing {
        boolean play = true;
 
        keyboard = new Scanner(System.in);
-
        do {
            playerTurns = 10;
            boolean gameWon = false;
@@ -37,10 +36,8 @@ public class NumberGuessing {
                        System.out.print("Your guess, " +playerGuess + " is too low.");
                    }
                }
-
                if (totalTries == playerTurns){
                    System.out.println("\nOpps!No turns left. You lose.");
-
                }
            }
            do {
