@@ -14,7 +14,7 @@ public class NumberGuessing {
 
        keyboard = new Scanner(System.in);
        do {
-           playerTurns = 10;
+           playerTurns = 7;
            boolean gameWon = false;
            int totalTries = 0;
            pickedNumber = (int) (Math.random() * 100);
@@ -23,7 +23,7 @@ public class NumberGuessing {
                playerGuess = keyboard.nextInt();
                totalTries++;
                if (playerGuess == pickedNumber) {
-                   System.out.println("You won!");
+                   System.out.println("Congratulations, you've won!");
                    System.out.println("It took you " + totalTries + " turns to guess my number, which was " + pickedNumber + "!");
                    System.out.println("Thank you for playing.");
                    gameWon = true;
