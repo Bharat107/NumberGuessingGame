@@ -37,7 +37,7 @@ public class NumberGuessing {
                    }
                }
                if (totalTries == playerTurns){
-                   System.out.println("\nOpps!No turns left. You lose.");
+                   System.out.println("\nOpps, you couldn't guess the number " + pickedNumber + " and you now have no turns left. You lose.");
                }
            }
            do {
